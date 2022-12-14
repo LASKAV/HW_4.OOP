@@ -1,10 +1,11 @@
 #pragma once
 #include <iostream>
 #include "Class_Room.h"
+#include "Class_Wallpaper.h"
 #include "Class_Flat.h"
 
 // Атрибуты рулона: название, размеры, цена.
-
+class Room;
 class Wallpaper  // Класс Обои 
 {
     char* name;
@@ -41,9 +42,14 @@ public:
         std::cout << "Parameters Wallpaper = " << float(parameters) << std::endl;
         std::cout << "Const Wallpaper = " << cost << " $" << std::endl;
     }
+    float getWallpaper_L() { return Length; }
+    float getWallpaper_W() { return Width; }
+    float getWallpaper_H() { return cost; }
+    float getWallpaper_P() { return parameters; }
     ~Wallpaper()
     {
         delete[] name;
     }
     friend float wallpaper_strips(Wallpaper Len, Room Hei);
+    friend float wallpaper_Number_strips(Room paramet, Wallpaper width);
 };
