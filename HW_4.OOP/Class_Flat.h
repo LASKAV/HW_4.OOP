@@ -3,12 +3,12 @@
 #include "Class_Room.h"
 #include "Class_Wallpaper.h"
 
-// Атрибуты(поля) квартиры: список комнат.
+// РђС‚СЂРёР±СѓС‚С‹(РїРѕР»СЏ) РєРІР°СЂС‚РёСЂС‹: СЃРїРёСЃРѕРє РєРѕРјРЅР°С‚.
 
-class Flat  // Класс квартира
+class Flat  // РљР»Р°СЃСЃ РєРІР°СЂС‚РёСЂР°
 {
-    Room* rooms;       // Наследуем параметры комнаты для квартиры 
-    int roomsNumber;   // Количество квартир
+    Room* rooms;       // РќР°СЃР»РµРґСѓРµРј РїР°СЂР°РјРµС‚СЂС‹ РєРѕРјРЅР°С‚С‹ РґР»СЏ РєРІР°СЂС‚РёСЂС‹ 
+    int roomsNumber;   // РљРѕР»РёС‡РµСЃС‚РІРѕ РєРІР°СЂС‚РёСЂ
 public:
     Flat()
     {
@@ -18,7 +18,7 @@ public:
     int Input_flat()
     {
         std::cout << "\nFLAT" << std::endl;
-        std::cout << "Enter number of apartments : ";  // ввод количество квартир
+        std::cout << "Enter number of apartments : ";  // РІРІРѕРґ РєРѕР»РёС‡РµСЃС‚РІРѕ РєРІР°СЂС‚РёСЂ
         // std::cout << "Enter number of rooms : "; std::cin >> rooms[0];
         std::cin >> roomsNumber;
         rooms = new Room[roomsNumber];
