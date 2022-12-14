@@ -4,7 +4,7 @@
 #include "Class_Flat.h"
 
 /*
-* 1) Написать программу «Стоимость обоев». Программа запрашивает: 
+1) Написать программу «Стоимость обоев». Программа запрашивает: 
 ▷ количество комнат в квартире, в которых планируется клеить обои, 
 ▷ параметры каждой комнаты, 
 ▷ параметры каждого вида обоев, которые планируется использовать. 
@@ -38,7 +38,5 @@ int main()
     Wallpaper Obj_Wallpaper;
     Obj_Wallpaper.Input_parameters_wallpaper();
     Obj_Wallpaper.OutPut_parameters_wallpaper();
-
-    Obj_Wallpaper.wallpaper_strips();
 }
 
