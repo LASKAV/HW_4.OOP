@@ -55,6 +55,12 @@ public:
         parameters = Length * Width;
     }
 
+    float getRoom_L() { return Length; }
+    float getRoom_W() { return Width; }
+    float getRoom_H() { return Height; }
+    float getRoom_P() { return parameters; }
+ 
+
     void OutPut_parameters_room()
     {
         std::cout << "Name room = " << name << std::endl;
@@ -65,5 +71,5 @@ public:
         delete[] name;
     }
     friend float wallpaper_strips(Wallpaper Len, Room Hei);
+    friend float wallpaper_Number_strips(Room paramet, Wallpaper width);
 };
-
