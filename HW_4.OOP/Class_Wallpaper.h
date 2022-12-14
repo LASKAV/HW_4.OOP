@@ -1,20 +1,19 @@
 #pragma once
 #include <iostream>
 #include "Class_Room.h"
-#include "Class_Wallpaper.h"
 #include "Class_Flat.h"
 
-// Атрибуты рулона: название, размеры, цена.
+// РђС‚СЂРёР±СѓС‚С‹ СЂСѓР»РѕРЅР°: РЅР°Р·РІР°РЅРёРµ, СЂР°Р·РјРµСЂС‹, С†РµРЅР°.
 
-class Wallpaper  // Класс Обои 
+class Wallpaper  // РљР»Р°СЃСЃ РћР±РѕРё 
 {
     char* name;
     float parameters;
     float cost;
-    float Length;   // Длина
-    float Width;    // Ширина
+    float Length;   // Р”Р»РёРЅР°
+    float Width;    // РЁРёСЂРёРЅР°
 public:
-    Wallpaper()  // Конструктор по умолчанию
+    Wallpaper()  // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     {
         name = nullptr;
         parameters = NULL;
@@ -25,7 +24,7 @@ public:
     void Input_parameters_wallpaper()
     {
         char name_wallpaper[40];
-        std::cout << "\nWALLPAPER" << std::endl;  // Длина / Ширина
+        std::cout << "\nWALLPAPER" << std::endl;  // Р”Р»РёРЅР° / РЁРёСЂРёРЅР°
         std::cout << "Enter name : "; 
         std::cin.ignore();
         std::cin.getline(name_wallpaper,40);
