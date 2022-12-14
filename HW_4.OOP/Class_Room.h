@@ -3,19 +3,19 @@
 #include "Class_Wallpaper.h"
 #include "Class_Flat.h"
 
-// Атрибуты комнаты: название, размеры, клеить потолок или нет.
+// РђС‚СЂРёР±СѓС‚С‹ РєРѕРјРЅР°С‚С‹: РЅР°Р·РІР°РЅРёРµ, СЂР°Р·РјРµСЂС‹, РєР»РµРёС‚СЊ РїРѕС‚РѕР»РѕРє РёР»Рё РЅРµС‚.
 
-class Room  // Класс Комната
+class Room  // РљР»Р°СЃСЃ РљРѕРјРЅР°С‚Р°
 {
     char* name;
-    float parameters;  // Параметры
-    bool ceiling;      // потолок , клеить потолок или нет
-    float Length;      // Длина 
-    float Width;       // Ширина
-    float Height;      // Высота
+    float parameters;  // РџР°СЂР°РјРµС‚СЂС‹
+    bool ceiling;      // РїРѕС‚РѕР»РѕРє , РєР»РµРёС‚СЊ РїРѕС‚РѕР»РѕРє РёР»Рё РЅРµС‚
+    float Length;      // Р”Р»РёРЅР° 
+    float Width;       // РЁРёСЂРёРЅР°
+    float Height;      // Р’С‹СЃРѕС‚Р°
 
 public:
-    Room()  // Конструктор по умолчанию
+    Room()  // РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
     {
         name = nullptr;
         parameters = NULL;
