@@ -1,6 +1,5 @@
 #pragma once
 #include <iostream>
-#include "Class_Room.h"
 #include "Class_Wallpaper.h"
 #include "Class_Flat.h"
 
@@ -31,7 +30,7 @@ public:
         std::cin.getline(name_wallpaper,40);
         name = new char[strlen(name_wallpaper) + 1];
         strcpy_s(name, strlen(name_wallpaper) + 1, name_wallpaper);
-        std::cout << "\nEnter Length : "; std::cin >> Length;
+        std::cout << "Enter Length : "; std::cin >> Length;
         std::cout << "Enter Width : "; std::cin >> Width;
         std::cout << "Enter cost : "; std::cin >> cost;
         parameters = Length / Width;
@@ -39,17 +38,21 @@ public:
     void OutPut_parameters_wallpaper()
     {
         std::cout << "Name Wallpaper = " << name << std::endl;
+        std::cout << "Length : " << Length << std::endl;
+        std::cout << "Width : " << Width << std::endl;
         std::cout << "Parameters Wallpaper = " << float(parameters) << std::endl;
-        std::cout << "Const Wallpaper = " << cost << " $" << std::endl;
+        std::cout << "Const Wallpaper = " << cost << " $" << std::endl; 
     }
-    float getWallpaper_L() { return Length; }
-    float getWallpaper_W() { return Width; }
-    float getWallpaper_H() { return cost; }
-    float getWallpaper_P() { return parameters; }
+    float GetWallpaper_L() { return Length; }
+    float GetWallpaper_W() { return Width; }
+    float GetWallpaper_C() { return cost; }
+    float GetWallpaper_P() { return parameters; }
+  
     ~Wallpaper()
     {
         delete[] name;
     }
-    friend float wallpaper_strips(Wallpaper Len, Room Hei);
-    friend float wallpaper_Number_strips(Room paramet, Wallpaper width);
+    friend void wallpaper_Number_strips(Room paramet, Wallpaper width);
+    friend void wallpaper_strips(Wallpaper Len, Room Hei, Wallpaper cos);
+   
 };
