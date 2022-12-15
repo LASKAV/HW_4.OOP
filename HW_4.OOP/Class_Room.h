@@ -4,7 +4,6 @@
 #include "Class_Flat.h"
 
 // Атрибуты комнаты: название, размеры, клеить потолок или нет.
-
 class Room  // Класс Комната
 {
     char* name;
@@ -52,24 +51,26 @@ public:
             ceiling = false;
         }
 
-        parameters = Length * Width;
+        parameters = (Length * 2) + (Width * 2);   // периметр комнаты = 5 м (длина комнаты) × 2 + 3,75 м (ширина комнаты) × 2 = 17,5 м 
     }
-
-    float getRoom_L() { return Length; }
-    float getRoom_W() { return Width; }
-    float getRoom_H() { return Height; }
-    float getRoom_P() { return parameters; }
+    float GetRoom_L() { return Length; }
+    float GetRoom_W() { return Width; }
+    float GetRoom_H() { return Height; }
+    float GetRoom_P() { return parameters; }
  
 
     void OutPut_parameters_room()
     {
         std::cout << "Name room = " << name << std::endl;
+        std::cout << "Length : " << Length << std::endl;
+        std::cout << "Width : " << Width << std::endl;
+        std::cout << "Height : " << Height << std::endl;
         std::cout << "Parameters room = " << float(parameters) << std::endl;
     }
     ~Room()
     {
-        delete[] name;
+       delete[] name;       
     }
-    friend float wallpaper_strips(Wallpaper Len, Room Hei);
-    friend float wallpaper_Number_strips(Room paramet, Wallpaper width);
+    friend void wallpaper_Number_strips(Room paramet, Wallpaper width);
+    friend void wallpaper_strips(Wallpaper Len, Room Hei, Wallpaper cos);
 };
