@@ -7,21 +7,20 @@
 class Room;
 class Flat  // Класс квартира
 {
-    Room* rooms;       // Наследуем параметры комнаты для квартиры 
-    int roomsNumber;   // Количество квартир
+    Room *rooms;       // Наследуем параметры комнаты для квартиры 
+    int roomsNumber;   
 public:
     Flat()
     {
         rooms = nullptr;
         roomsNumber = NULL;
     }
-    void Input_flat()
+    void Input_flat(int rooms_M)
     {
-        std::cout << "\nFLAT" << std::endl;
-        std::cout << "Enter number of apartments : ";  // ввод количество квартир
-        // std::cout << "Enter number of rooms : "; std::cin >> rooms[0];
-        std::cin >> roomsNumber;
-    }
+        std::cout << "FLAT" << std::endl;
+        // rooms = new Room[rooms_M];
+        roomsNumber = rooms_M;
+    }               
     void OutPut_flat()
     {
         std::cout << "Number of apartments = " << roomsNumber << std::endl;
